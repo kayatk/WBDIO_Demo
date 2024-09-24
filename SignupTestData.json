@@ -1,0 +1,13 @@
+{
+    "SignUp":[
+        {
+            "Email":"kayatst12+auto65@gmail.com",
+            "UserName": "Testauto65",
+            "Password": "Test@2024",
+            "City": "Chicago",
+            "BirthDate": "10",
+            "BirthMonth":"10",
+            "BirthYear":"1998"
+        }
+    ]
+}

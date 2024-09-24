@@ -1,0 +1,4 @@
+[43907:259:0913/112921.909746:WARNING:chrome_main_delegate.cc(742)] This is Chrome version 128.0.6613.138 (not a warning)
+[43907:259:0913/112922.145554:INFO:chrome_browser_cloud_management_controller.cc(196)] No machine level policy manager exists.
+[43907:259:0913/112923.261342:ERROR:CONSOLE(888)] "This document requires 'TrustedHTML' assignment.", source:  (888)
+[43907:259:0913/112923.445043:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
