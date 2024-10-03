@@ -27,14 +27,14 @@ export const config: Options.Testrunner = {
        // './test/specs/**/*.ts'
        // './test/specs/**/*.ts'
        //'./test/specs/LoginTest.spec.ts'
-      './test/specs/SignUpTest.spec.ts',
-     // './test/specs/LoginTest.spec.ts',
-      //'./test/specs/SignUpMailHog.spec.ts'
+     //'./test/specs/SignUpTest.spec.ts',
+     './test/specs/LoginTest.spec.ts'
+   //  './test/specs/singleSiteLogin.spec.ts'
     ],
     // Patterns to exclude.
     exclude: [
        // './test/specs/LoginTest.spec.ts',
-        './test/specs/Login.ts',
+       // './test/specs/Login.ts',
        //'./test/specs/SignUpTest.spec.ts'
         // 'path/to/excluded/files'
     ],
@@ -61,7 +61,7 @@ export const config: Options.Testrunner = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        maxInstances: 1,
+        maxInstances: 3,
         browserName: 'chrome',
         'goog:chromeOptions': {
             args: [

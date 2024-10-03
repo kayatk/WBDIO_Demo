@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Buffer } from 'buffer'; 
 
 class MailHogService {
-    
+   
     private mailHogAPI: string;
     private targetEmail: string;
 
@@ -53,12 +53,17 @@ class MailHogService {
     // Function to retrieve the email from MailHog and extract the activation URL
     public async getActivationLink(): Promise<string | null> {
         try {
+            //setTimeout('5000');
             const response = await axios.get(this.mailHogAPI);
+            console.info("RESPONSE is =====================> : "+response)
             const messages = response.data.items;
+            console.info("MESSAGES ========================> : "+messages)
             const emailMessage = messages.find((message: any) => {
                 const toHeader = message.Content.Headers.To[0];
                 const emailRegex = /<(.+?)>/;
                 const match = toHeader.match(emailRegex);
+                console.info("match ========================> : "+match)
+                console.info("targetEmail ========================> : "+this.targetEmail)
                 return match && match[1] === this.targetEmail;
             });
 
@@ -77,7 +82,7 @@ class MailHogService {
         }
     }
 
-    public async navigateToActivationURL(email: string): Promise<string | null> {
+    public static async navigateToActivationURL(email: string): Promise<string | null> {
         const mailHogService = new MailHogService(email);
         const activationUrl = await mailHogService.getActivationLink();
         if (activationUrl) {

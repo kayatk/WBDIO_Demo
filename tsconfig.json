@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "moduleResolution": "node",
-        "module": "commonjs", // or "esnext", depending on your project setup
+        "module": "ESNext", 
         "esModuleInterop": true,
          "allowSyntheticDefaultImports": true,
         "target": "es2022",
