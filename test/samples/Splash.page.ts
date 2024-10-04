@@ -166,13 +166,8 @@ export class Splash{
 
    async clickNotificationDenyBtn(): Promise<this>{
     
-  // const exists = await this.notificationDenyBtn.isExisting();
- // console.log(` ==================================>>>>>>>>>>>>>>The notificationDenyBtn is ther or not ==================================>>>>>>>>>>>>>>${exists}`)
-   //if(exists){
-      //await this.notificationDenyBtn.scrollIntoView();
-      //await  this.notificationDenyBtn.waitForClickable()
-      await this.notificationDenyBtn.click()
-  // }
+  
+    
     return this
    }
 
